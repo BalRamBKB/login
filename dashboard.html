@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>My Dashboard</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="owl/owl.carousel.css">
+    <link rel="stylesheet" href="owl/owl.theme.default.css">
+    <link rel="stylesheet" href="materialize/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    header {
+        background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://lh3.googleusercontent.com/Pj7qYjLZY7EI1vh5xDQLt6oozAevLG-qFVzjrN3MgEr_sK12js9IrrJk3LInwy3YsZDIDbdyvWbxslJzP1I=w1920-h1080-p-k-nd-no') #000;
+        background-size: cover;
+        background-position: center center;
+        padding-bottom: 50px;
+        height: 100%;
+        max-width: 100%;
+        background-color: #6DB3F2;
+    }
+    
+    nav.transparent {
+        box-shadow: none;
+    }
+    
+    nav .brand-logo {
+        font-size: 22px !important;
+        padding-left: 30px;
+        top: 3px;
+    }
+    
+    nav i.material-icons.menuu {
+        display: inline-block !important;
+        padding-left: 25px;
+        font-size: 1.6rem;
+    }
+    
+    .top-menu {
+        position: relative;
+        right: 15px;
+        top: 10px;
+    }
+    
+    .top-menu-all {
+        position: relative;
+        right: 15px;
+        top: 10px;
+    }
+    
+    .cust-collection {
+        padding-left: 15px;
+        border: none;
+        color: #fff;
+    }
+    
+    .cust-collection li {
+        margin: 15px 0;
+    }
+    
+    .contents {
+        padding-top: 30px;
+        font-weight: 300;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .input-field .prefix {
+        top: 10px;
+        left: 15px;
+    }
+    
+    #search {
+        /*padding: 15px;*/
+        height: 50px;
+        border-bottom: 0;
+        margin-left: 50px;
+    }
+    
+    #search:focus {
+        box-shadow: none;
+    }
+    
+    .collection .search-collection {
+        border-bottom: 0;
+    }
+    
+    .hang {
+        -webkit-background-size: 32px;
+        background-size: 32px;
+        background-image: url(https://ssl.gstatic.com/images/icons/material/product/1x/hangouts_32dp.png);
+        display: inline-block;
+        height: 32px;
+        margin-left: 18px;
+        margin-right: 22px;
+        vertical-align: middle;
+        width: 32px;
+    }
+    
+    .video {}
+    
+    .call {
+        margin-left: 20px;
+    }
+    
+    .chat {
+        margin-left: 20px;
+    }
+    
+    .items {
+        display: flex;
+        display: -webkit-flex;
+        max-width: 100%;
+        margin: 0 -20px;
+    }
+    
+    .item-circle {
+        width: 85px;
+        height: 85px;
+        text-align: center;
+        /* line-height: 2; */
+        padding: 30px;
+        /* display: flex; */
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /*margin: 50px 50px 0px 0px;*/
+        margin: 20px 20px;
+    }
+    
+    .item-txt {
+        /*margin: 30px 55px 0px 0px;*/
+        color: #fff;
+        margin: 20px 0px 20px 33px;
+    }
+
+/* Start customize on mobile top to bottom*/
+
+/*	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 480px)
+	  and (-webkit-min-device-pixel-ratio: 2) {
+
+	  	#top{
+	  		position: absolute;
+	  		top: 5px;
+	  		text-align: center;
+	  	}
+	  	#bottom{
+	  		position: relative;
+	  		bottom:-335px;
+	  		margin-bottom: 280px;
+	  	}
+	}*/
+
+/* End customize on mobile top to bottom*/
+    
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <nav class="transparent">
+            <div class="nav-wrappwr">
+                <a href="#" data-activates="mobile" class="abc"><i class="material-icons menuu">menu</i></a>
+                <a href="#" class="brand-logo white-blue-text"><img width="170" src="https://www.gstatic.com/chat/hangouts/hangouts_watermark_2x_605177f5b0189bd3199b55a8709495ae.png" alt=""></a>
+                <ul class="right hide-on-med-and-down ">
+                    <li><a class="white-text" href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                    <li><a class="white-text" href="#"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-bell fa-stack-1x black-text"></i>
+					  </span></a>
+                    </li>
+                    <li class="top-menu">
+                        <a class="white-text" href="#"><img src="https://lh3.googleusercontent.com/-PLDfwi00qqY/AAAAAAAAAAI/AAAAAAAAAAA/AKB_U8tMDwpiarUunrUVGyvhpm8tO0dFlA/s32-c-mo/photo.jpg" class="circle" alt=""></a>
+                    </li>
+                </ul>
+                <ul id="mobile" class="side-nav">
+                    <li>
+                        <div class="hang"></div> <span class="black-text">Hangouts</span>
+                    </li>
+                    <li><a class="black-text" href="#"><span class="fa fa-users"></span>&nbsp; &nbsp;&nbsp;&nbsp;  Contacts</a></li>
+                    <li><a class="black-text" href="#"><span class="material-icons">chat</span>&nbsp;  Conversations</a></li>
+                    <li><a class="black-text" href="#"><span class="material-icons">phone</span>&nbsp;  Phone Calls</a></li>
+                    <li><a class="black-text" href="#"><span class="material-icons">drafts</span>&nbsp;  Invites</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <p class="black-text" style="padding-left:15px;">App downloads</p>
+                    </li>
+                    <li><a class="black-text" href="#"><span class="material-icons">android</span>&nbsp; Android</a></li>
+                    <li><a class="black-text" href="#"><span class="material-icons">computer</span>&nbsp;  Chrome</a></li>
+                    <li><a class="black-text" href="#"><span class="fa fa-apple"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  iOS</a></li>
+                    <li><a class="black-text" href="#"><span class="material-icons">android</span>&nbsp;  Hangouts Dialer</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="black-text" href="#"><span class="material-icons">brightness_high</span>&nbsp; Settings</a></li>
+                    <li><a class="black-text" href="#"><span class="material-icons">report</span>&nbsp;  Help &amp; Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col m1 hide-on-med-and-down">
+                    <ul class="collection cust-collection">
+                        <li class="collcetion-item"><i class="fa fa-users"></i></li>
+                        <li class="collcetion-item"><span class="material-icons">chat</span></li>
+                        <li class="collcetion-item"><span class="material-icons">phone</span></li>
+                        <li class="collcetion-item"><i class="material-icons">more_horiz</i></li>
+                    </ul>
+                </div>
+                <div class="col m4 s12" id="bottom">
+                    <div class="card">
+                        <div class="input-field">
+                            <i class="material-icons prefix">search</i>
+                            <input type="text" name="" id="search" placeholder="New Conversations">
+                            <ul class="collection">
+                                <li class="collection-item avatar search-collection">
+                                    <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="" class="circle">
+                                    <span id="name" class="title"></span>
+                                    <p>You
+                                    </p>
+                                    <a href="#!" class="secondary-content">Now</a>
+                                </li>
+                                <li class="collection-item avatar search-collection">
+                                    <img src="img/dear.jpg" alt="" class="circle">
+                                    <span class="title">Sudhir</span>
+                                    <p>Good Morning
+                                    </p>
+                                    <a href="#!" class="secondary-content">Fri</a>
+                                </li>
+                                <li class="collection-item avatar search-collection">
+                                    <img src="img/befikre.jpg" alt="" class="circle">
+                                    <span class="title">Mohit</span>
+                                    <p>How are you?
+                                    </p>
+                                    <a href="#!" class="secondary-content">Thu</a>
+                                </li>
+                                <li class="collection-item avatar search-collection">
+                                    <img src="img/underworld.jpg" alt="" class="circle">
+                                    <span class="title">Udhav</span>
+                                    <p>Hy
+                                    </p>
+                                    <a href="#!" class="secondary-content">Nov 20</a>
+                                </li>
+                                <li class="collection-item avatar search-collection">
+                                    <img src="img/fantastic.jpg" alt="" class="circle">
+                                    <span class="title">Avi</span>
+                                    <p>Good
+                                    </p>
+                                    <a href="#!" class="secondary-content">Oct 30</a>
+                                </li>
+                                <li class="collection-item avatar search-collection">
+                                    <img src="img/moana.jpg" alt="" class="circle">
+                                    <span class="title">Ankit</span>
+                                    <p>Fine
+                                    </p>
+                                    <a href="#!" class="secondary-content">12/6/15</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m7 s12" id="top">
+                    <div class="contents white-text">
+                        <h3> Welcome <span id="welcome-name"></span> <span class="yellow-text">&#128515;</span></h3>
+                        <h5>Get started by calling or messaging a friend below.</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12">
+                            <div class="items">
+                                <div class="item-circle">
+                                    <i class="fa fa-video-camera fa-lg white-text"></i>
+                                </div>
+                                <div class="item-circle">
+                                    <i class="fa fa-phone fa-lg white-text"></i>
+                                </div>
+                                <div class="item-circle">
+                                    <i class="fa fa-comments fa-lg white-text"></i>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <p class="item-txt"><b>VIDEO CALL</b></p>
+                                <p class="item-txt"><b>PHONE CALL</b></p>
+                                <p class="item-txt"><b>MESSAGE</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer class="page-footer blue-grey" style="padding:0;margin:0;">
+        <div class="footer-copyright">
+            <div class="container center">
+                <b>Design &amp; Developed by BalRam (BKB)</b>
+            </div>
+        </div>
+    </footer>
+    <!-- <div class="shape2"></div> -->
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="materialize/js/jquery-2.0.2.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize/js/materialize.min.js"></script>
+    <script src="owl/owl.carousel.js"></script>
+    <script src="parameter.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".abc").sideNav({
+            menuWidth: 250
+        });
+        $('.slider').slider({
+            indicators: false,
+            height: 150
+        });
+        $(".parallax").parallax({
+            height: 200
+        });
+        //getUrlVars();
+
+        var url = document.location.search;
+
+        var params = url.split('=' || ' ' || '?');
+
+
+
+        filterValue = params[params.length - 1]
+        if (filterValue) {
+            //var newstr = str.replace(filterValue, "$2, $1");
+            document.getElementById("welcome-name").innerHTML = filterValue.replace('+', ' ');
+            document.getElementById("name").innerHTML = filterValue.replace('+', ' ');
+
+            //filterValue; //window.location.search;
+            //$('input[data-type="search"]').val(filterValue);
+        }
+
+
+
+
+    });
+    </script>
+</body>
+
+</html>

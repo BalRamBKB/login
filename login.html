@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Login</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=tel],
+    input[type=text],
+    input[type=url] {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        display: inline-block;
+        height: 45px;
+        padding: 0 8px;
+        margin: 0;
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-top: 1px solid #c0c0c0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -moz-border-radius: 1px;
+        -webkit-border-radius: 1px;
+        border-radius: 1px;
+        font-size: 15px;
+        color: #404040;
+    }
+    
+    input[type=submit] {
+        width: 100%;
+        display: block;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        z-index: 1;
+        position: relative;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .gmail-card {
+        background-color: #f7f7f7;
+        /*padding: 20px 25px 30px;*/
+        /*margin: 0 auto 25px;*/
+        /*width: 354px;*/
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .signin-card {
+        width: 100%;
+        padding: 40px 30px;
+    }
+    
+    .banner h1 {
+        /*font-family: 'Open Sans', arial;*/
+        -webkit-font-smoothing: antialiased;
+        font-size: 38px;
+        font-weight: 300;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #555;
+        margin: 0;
+    }
+    
+    .banner h2 {
+        font-family: 'Open Sans', arial;
+        -webkit-font-smoothing: antialiased;
+        color: #555;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .logo img {
+        /*display: block;*/
+        /*text-align: center;*/
+        margin-top: 20px;
+    }
+    
+    .circle-mask {
+        display: block;
+        height: 96px;
+        width: 96px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 100;
+        margin-bottom: 10px;
+        background-size: 96px;
+        background-repeat: no-repeat;
+        background-image: url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png);
+        -webkit-transition: opacity 0.075s;
+        -moz-transition: opacity 0.075s;
+        -ms-transition: opacity 0.075s;
+        -o-transition: opacity 0.075s;
+        transition: opacity 0.075s;
+    }
+    .signin-card .profile-img {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 10px;
+        display: block;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+
+      	#top{
+      		position: absolute;
+      		top: 5px;
+      		text-align: center;
+      	}
+      	#bottom{
+      		position: relative;
+      		bottom:-335px;
+      		margin-bottom: 280px;
+      	}
+
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom:0px;">
+            <div class="col m6 offset-m3 logo center-align s12">
+                <img src="https://ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_112x36dp.png" alt="" style="max-width:100%;">
+            </div>
+        </div>
+        <div class="banner col m6 offset-m3 s12">
+            <h1>
+      One account. All of Google.
+    </h1>
+            <h2 class="hidden-small">
+      Sign in to continue to Gmail
+      </h2>
+        </div>
+        <div class="row">
+            <div class="col m4 offset-m4 s12">
+                <div class="gmail-card signin-card">
+                    <div class="circle-mask" style="">
+                        <canvas id="canvas" class="circle" width="96" height="96"></canvas>
+                    </div>
+                    <form name="form1" action="dashboard.html" method="get">
+                        <div class="input-field">
+                            <input type="text" name="n" id="name" value="" placeholder="Enter Name" required>
+                            <!-- <label for="n">Enter Name</label> -->
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="pwd1" value="" placeholder="Password" required>
+                            <!-- <label for="pass">Password</label> -->
+                        </div>
+                        <input class="btn blue" type="submit" value="Sign in">
+                        <!-- <input type="submit" value="next"> -->
+                        <p class="blue-text">Need help?</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <!-- <div class="input-field white col m12 s12">
+                    <input type="search" name="" id="" placeholder="Type a message" style="background: #f9f9f9;border-radius:5px;border-bottom: 1px solid #f9f9f9;"><i class="material-icons left">send</i>
+                </div> -->
+        <!-- <form name="form1" action="material-Site13.html" method="get">
+            name:
+            <input type="text" id="name" name="n" value="">
+            <input type="submit" value="next">
+            <button type="button" id="print" onClick="testJS()"> Print </button>
+        </form> -->
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="materialize/js/jquery-2.0.2.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // $(".button-collapse").sideNav();
+        // $(".slider").slider();
+    });
+
+    function testJS() {
+        var b = document.getElementById('name').value,
+            url = 'http://path_to_your_html_files/dashboard.html?name=' + name.value;
+
+        document.location.href = url;
+    }
+    </script>
+</body>
+
+</html>
